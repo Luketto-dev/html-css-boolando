@@ -12,18 +12,20 @@ html{
 .bg-orange{
     background-color: #FF6900;
 }
+
+.d-flex{
+    display: flex;
+}
+
 .container{
     width: 100%;
     max-width: 960px;
     margin: 0 auto;
+    padding: 1rem 0.5rem;
 }
 
-.navbar{
-    padding-top: .8rem;
-    padding-bottom: .8rem;
-}
 
-.navbar .main-menu{
+.main-menu{
     width: 25%;
     gap: .5rem;
     align-items: center;
@@ -42,7 +44,7 @@ html{
     
 }
 
-.navbar .logo{
+.logo{
     width: 50%;
     text-align: center;
 }
@@ -51,7 +53,7 @@ html{
     width: 100px;
 }
 
-.navbar .personal-area{
+.personal-area{
     width: 25%;
     justify-content: end;
     gap: .5rem;
@@ -62,9 +64,65 @@ html{
 .personal-area svg{
     width: 15px;
     height: 15px;
+    cursor: pointer;
     
 }
 
-.d-flex{
-    display: flex;
+.product{
+    position: relative;
 }
+
+.product img{
+    width: 100%;
+}
+
+.row {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+.col {
+    flex-basis: calc((100% - 2rem) / 3);
+    flex-grow: 1;
+  }
+
+  .product .product-favorite{
+      position: absolute;
+      top: 10px;
+      right: 0;
+      font-size: 2rem;
+      background-color: white;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+  }
+
+  .product .product-sales{
+      position: absolute;
+      left: 0;
+      bottom: 90px;
+      color: white;
+      font-size: .9rem;
+      font-weight: bold;
+  }
+
+  .product .product-sales .sales{
+      background-color: red;
+      padding: .3rem;
+  }
+
+  .product .product-sales .stostenibility{
+      background-color: green;
+      padding: .3rem;
+  }
+  
+  .product .product-price{
+      color: red;
+      font-weight: bold;
+  }
+
+  .product .product-price span{
+      color: black;
+      text-decoration: line-through;
+  }
