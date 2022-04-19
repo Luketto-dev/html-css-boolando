@@ -9,17 +9,30 @@ html{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+main{
+    padding-top: 100px;
+}
+
 .bg-orange{
     background-color: #FF6900;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    
 }
 
 .d-flex{
     display: flex;
 }
 
+.j-content-between{
+    justify-content:space-between;
+}
+
 .container{
     width: 100%;
-    max-width: 960px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 1rem 0.5rem;
 }
@@ -31,17 +44,17 @@ html{
     align-items: center;
 }
 
-.main-menu .menu-items{
+.main-menu .menu-items,
+footer ul li{
     list-style: none;
 }
 
-.main-menu .menu-items a{
+.main-menu .menu-items a,
+footer ul li a{
     text-decoration: none;
-    color: black;
     display: inline-block;
     color: white;
     font-weight: bold;
-    
 }
 
 .logo{
@@ -61,23 +74,18 @@ html{
     align-items: center;
 } 
 
-.personal-area svg{
-    width: 15px;
-    height: 15px;
+.personal-area a svg,
+footer .footer-social .footer-social-icons a svg{
+    width: 18px;
+    height: 18px;
     cursor: pointer;
+    color: white;
     
-}
-
-.product{
-    position: relative;
-}
-
-.product img{
-    width: 100%;
 }
 
 .row {
     gap: 1rem;
+    row-gap: 3rem;
     flex-wrap: wrap;
   }
   
@@ -86,43 +94,76 @@ html{
     flex-grow: 1;
   }
 
-  .product .product-favorite{
-      position: absolute;
-      top: 10px;
-      right: 0;
-      font-size: 2rem;
-      background-color: white;
-      width: 40px;
-      height: 40px;
-      text-align: center;
-      line-height: 40px;
-  }
+.product{
+    position: relative;
+}
 
-  .product .product-sales{
-      position: absolute;
-      left: 0;
-      bottom: 90px;
-      color: white;
-      font-size: .9rem;
-      font-weight: bold;
-  }
+.product .product-image{
+    width: 100%;
+    object-fit: cover;
+}
 
-  .product .product-sales .sales{
-      background-color: red;
-      padding: .3rem;
-  }
 
-  .product .product-sales .stostenibility{
-      background-color: green;
-      padding: .3rem;
-  }
-  
-  .product .product-price{
-      color: red;
-      font-weight: bold;
-  }
 
-  .product .product-price span{
-      color: black;
-      text-decoration: line-through;
-  }
+
+.product .product-favorite{
+    position: absolute;
+    top: 10px;
+    right: 0;
+    font-size: 2rem;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.product .product-sales{
+    position: absolute;
+    left: 0;
+    bottom: 90px;
+    color: white;
+    font-size: .9rem;
+    font-weight: bold;
+}
+
+.product .product-sales .sales{
+    background-color: red;
+    padding: .3rem;
+}
+
+.product .product-sales .stostenibility{
+    background-color: green;
+    padding: .3rem;
+}
+
+.product .product-price{
+    color: red;
+    font-weight: bold;
+    font-size: .9rem;
+}
+
+.product .product-price span{
+    color: black;
+    text-decoration: line-through;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    margin-top: 2.5rem;
+}
+
+footer ul{
+    gap: .7rem;
+    padding-top: .5rem;
+}
+
+footer ul li{
+    font-size: .9rem;
+}
+
+footer .footer-social .footer-social-icons{
+    padding-top: .5rem;
+}
